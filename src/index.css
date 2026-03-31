@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+.toggle {
+    width: 50px;
+    height: 18px;
+    background: var(--color-gray-400);
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.slider {
+    width: 24px;
+    height: 24px;
+    font-size: 15px;
+    background: var(--color-gray-100);
+    color: var(--color-gray-800);
+    border-radius: 50%;
+    position: absolute;
+    top: -3px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.slider.active {
+    transform: translateX(25px);
+    background: var(--color-gray-800);
+    color: var(--color-gray-100);
+}
+
+.description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+button:active {
+    scale: 0.95;
+    transition: all ease;
+}
