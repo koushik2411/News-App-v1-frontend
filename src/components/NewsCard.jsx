@@ -6,7 +6,7 @@ const NewsCard = ({article}) => {
     <>
         <div className=' w-full p-3 rounded-lg bg-amber-200 flex flex-col gap-2 justify-evenly bg-linear-to-b from-gray-50 to-gray-200 dark:bg-linear-to-b dark:from-gray-900 dark:to-gray-800 dark:text-gray-100'>
             <img
-                src={article.image || "https://via.placeholder.com/300"}
+                src={article.image ? article.image  : "https://via.placeholder.com/300"}
                 alt='newsImg'
                 className=' rounded-t-lg lg:h-56'
             />
